@@ -1,0 +1,256 @@
+@import 'common';
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#header {
+    .the-big {
+        display: none !important;
+    }
+}
+
+/* content */
+#content {
+    display: block;
+    padding: 20px 0 40px;
+    height: calc(100vh - 148px);
+    background-image: url(/assets/images/main/bg_content_sm.png);
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-size: cover;
+    .card {
+        display: none;
+    }
+    .container-fluid {
+        display: table;
+        width: 100%;
+        height: 100%;
+        table-layout: fixed;
+        .v-align {
+            display: table-cell;
+            vertical-align: middle;
+            .main-wrap {
+                .section-header {
+                    h3 {
+                        display: block;
+                        font-size: 0;
+                        width: 286px;
+                        margin: 0 auto;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+                .section-content {
+                    overflow: hidden;
+                    padding-top: 30px;
+                    .jumbo-slider {
+                        position: relative;
+                        .slick-arrow {
+                            position: absolute;
+                            top: calc(50% - 20px);
+                            display: block;
+                            width: 30px;
+                            height: 30px;
+                            z-index: 1;
+                            text-indent: -9999999px;
+                            border-radius: 50%;
+                            transform: translateY(-50%);
+                            background-color: rgba(#303030, .3);
+                            background-repeat: no-repeat;
+                            background-position: 50% 50%;
+                            background-size: 7px auto;
+                            &.slick-prev {
+                                left: 10px;
+                                background-image: url(/assets/images/main/ico_arrow_type03.png);
+                            }
+                            &.slick-next {
+                                right: 10px;
+                                background-image: url(/assets/images/main/ico_arrow_type04.png);
+                            }
+                        }
+                        .slick-list {
+                            overflow: visible;
+                            .slick-track {
+                                .slick-slide {
+                                    padding: 0 23px;
+                                    > a {
+                                        overflow: hidden;
+                                        display: block;
+                                        border-radius: 10px;
+                                        box-shadow: 0px 14px 10.68px 2.32px rgba(0, 0, 0, 0.18);
+                                        > figure {
+                                            img {
+                                                display: block;
+                                                width: 100%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .slick-dots {
+                            text-align: center;
+                            font-size: 0;
+                            margin-top: 30px;
+                            > li {
+                                display: inline-block;
+                                vertical-align: top;
+                                > button {
+                                    display: block;
+                                    width: 10px;
+                                    height: 10px;
+                                    text-indent: -99999999px;
+                                    margin: 0 5px;
+                                    border: 1px solid #fff;
+                                    border-radius: 50%;
+                                }
+                                &.slick-active {
+                                    > button {
+                                        background-color: #fff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media(min-width: $md) {
+        position: relative;
+        padding: 20px 0 30px;
+        min-height: 747px;
+        height: calc(100vh - 190px);
+        background-image: url(/assets/images/main/bg_content_lg.png);
+        .card {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: block;
+            .container {
+                position: relative;
+                overflow: hidden;
+                height: 88px;
+                > a {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    overflow: hidden;
+                    display: block;
+                    border-radius: 50%;
+                    animation: rotating 20s linear infinite;
+                    > figure {
+                        img {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        .container-fluid {
+            .v-align {
+                .main-wrap {
+                    .section-header {
+                        h3 {
+                            width: 520px;
+                        }
+                    }
+                    .section-content {
+                        padding-top: 50px;
+                        .jumbo-slider {
+                            .slick-arrow {
+                                width: 80px;
+                                height: 80px;
+                                padding: 0 25px;
+                                background-size: 20px auto;
+                                top: calc(50% - 24px);
+                                &.slick-prev {
+                                    left: 40px;
+                                }
+                                &.slick-next {
+                                    right: 40px;
+                                }
+                            }
+                            .slick-dots {
+                                > li {
+                                    > button {
+                                        width: 18px;
+                                        height: 18px;
+                                        margin: 0 10px;
+                                        border-width: 2px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
